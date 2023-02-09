@@ -59,6 +59,7 @@ class MobileScanner extends StatefulWidget {
   /// Create a new [MobileScanner] using the provided [controller]
   /// and [onBarcodeDetected] callback.
   const MobileScanner({
+    Key? key,
     this.controller,
     this.errorBuilder,
     this.fit = BoxFit.cover,
@@ -67,8 +68,7 @@ class MobileScanner extends StatefulWidget {
     this.onScannerStarted,
     this.placeholderBuilder,
     this.scanWindow,
-    super.key,
-  });
+  }) : super(key: key);
 
   @override
   State<MobileScanner> createState() => _MobileScannerState();
